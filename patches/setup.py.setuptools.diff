@@ -1,0 +1,21 @@
+--- setup.py.orig	2008-04-01 06:41:24.000000000 +0200
++++ setup.py	2008-04-01 07:44:50.000000000 +0200
+@@ -81,8 +81,8 @@
+ #-----------------------------------------------------------------------+
+ import os, os.path, sys
+ 
+-from distutils.core import setup
+-from distutils.extension import Extension
++from setuptools import setup
++from setuptools import Extension
+ 
+ __version__ = "2.5.1"
+ 
+@@ -140,6 +140,7 @@
+ 	url = "http://pypgsql.sourceforge.net/",
+ 	license = "Python",
+ 	packages = ["pyPgSQL", "pyPgSQL.libpq"],
++        zip_safe=False,
+ 	ext_modules = [Extension(
+ 	    name=modname,
+ 	    sources = sources,
